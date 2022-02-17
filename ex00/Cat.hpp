@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/17 18:17:23 by graja             #+#    #+#             */
-/*   Updated: 2022/02/17 19:45:53 by graja            ###   ########.fr       */
+/*   Created: 2022/02/17 16:57:04 by graja             #+#    #+#             */
+/*   Updated: 2022/02/17 19:39:29 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#ifndef CAT_H
+# define CAT_H
 
-int	main(void)
+# include "Animal.hpp"
+# include <iostream>
+
+class	Cat: public Animal
 {
-	Animal	kuh;
-	Cat	katze;
+	public:
+		Cat(void);
+		Cat(const Cat &cpy);
+		~Cat(void);
 
-	kuh.makeSound();
-	katze.makeSound();
-	return (0);
-}
+		Cat&	operator=(const Cat &ovr);
+
+		std::string	makeSound(void);
+};
+
+#endif
