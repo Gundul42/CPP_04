@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 16:57:04 by graja             #+#    #+#             */
-/*   Updated: 2022/02/18 17:12:55 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/18 19:40:39 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,11 @@ class	Cat: public Animal
 		Cat(const Cat &cpy);
 		virtual ~Cat(void);
 
-		Cat&	operator=(const Cat &ovr);
+		virtual Cat&	operator=(const Cat &ovr);
 
 		virtual std::string	makeSound(void) const;
+		virtual std::string	getIdea(int n);
+		virtual void			setIdea(int n, std::string mem);
 };
 
 #endif

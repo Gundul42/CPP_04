@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 18:17:23 by graja             #+#    #+#             */
-/*   Updated: 2022/02/18 17:50:31 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/18 19:37:02 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,39 @@
 
 int	main(void)
 {
-	const Animal	*qm = new Animal();
-	const Animal	*a = new Cat();
-	const Animal	*b = new Dog();
-	Animal			*c = new Cat();
+	int			max = 6;
+	const Animal*	animals[max];
+	int			i = 0;
+	Animal*			tiger = new Cat();
+	Animal*			pussy = new Cat();
 
-	std::cout << qm->getType() << " makes " << qm->makeSound() << std::endl;
-	std::cout << a->getType() << " makes " << a->makeSound() << std::endl;
-	std::cout << b->getType() << " makes " << b->makeSound() << std::endl;
-	std::cout << c->getType() <<  " makes " << c->makeSound() << std::endl;
-	*c = *a;
-	std::cout << c->getType() <<  " makes " << c->makeSound() << std::endl;
-
-	delete a;
-	delete b;
-	delete c;
-	delete qm;
+	while (i < max / 2)
+	{
+		animals[i] = new Dog();
+		i++;
+	}
+	while (i < max)
+	{
+		animals[i] = new Cat();
+		i++;
+	}
+	i = 0;
+	while (i < max)
+	{
+		std::cout << animals[i]->makeSound() << std::endl;
+		delete animals[i];
+		i++;
+	}
+	std::cout << std::endl;
+	std::cout << "---------------------------------------" << std::endl;
+	std::cout << "finish array test, now deep copy brainz" << std::endl;
+	std::cout << "---------------------------------------" << std::endl;
+	std::cout << std::endl;
+	tiger->setIdea(25, "I am so fucking hungry !");
+	std::cout << "Tiger says : " << tiger->getIdea(25) << std::endl;
+	*pussy = *tiger;
+	std::cout << "And now our pussy says : " << pussy->getIdea(25) << std::endl;
+	delete pussy;
+	delete tiger;
 	return (0);
 }

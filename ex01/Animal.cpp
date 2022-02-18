@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 17:10:19 by graja             #+#    #+#             */
-/*   Updated: 2022/02/18 13:27:55 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/18 19:26:38 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,16 @@ std::string	Animal::getType(void) const
 std::string	Animal::makeSound(void) const
 {
 	return ("undefined Sound");
+}
+
+std::string	Animal::getIdea(int n)
+{
+	std::cout << n << " not exists, not every Animal has a brain" << std::endl;
+	return ("");
+}
+
+void		Animal::setIdea(int n, std::string mem)
+{
+	std::cout << "Try to set " << n << " to " << mem << std::endl;
+	std::cout << "Not every Animal has a brain" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 17:10:19 by graja             #+#    #+#             */
-/*   Updated: 2022/02/18 18:11:48 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/18 19:31:21 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,18 @@ Dog&	Dog::operator=(const Dog &ovr)
 std::string	Dog::makeSound(void) const
 {
 	return ("WUFF");
+}
+
+std::string	Dog::getIdea(int n)
+{
+	if (n < 0 || n > 99)
+		return ("");
+	else
+		return (this->_brain->ideas[n]);
+}
+
+void		Dog::setIdea(int n, std::string mem)
+{
+	if (n >= 0 && n < 100)
+		this->_brain->ideas[n] = mem;
 }
