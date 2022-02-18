@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 17:10:19 by graja             #+#    #+#             */
-/*   Updated: 2022/02/17 19:44:33 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/18 12:37:56 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,5 @@ Cat&	Cat::operator=(const Cat &ovr)
 
 std::string	Cat::makeSound(void)
 {
-	std::cout << "MIAUUUU" << std::endl;
-	std::cout << std::endl;
 	return ("MIAUUUU");
 }

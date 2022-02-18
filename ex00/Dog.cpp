@@ -1,55 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 17:10:19 by graja             #+#    #+#             */
-/*   Updated: 2022/02/18 12:56:56 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/18 12:37:38 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "Dog.hpp"
 
 //Constructors
-Animal::Animal(void)
+Dog::Dog(void)
 {
-	std::cout << "Animal default constructor called" << std::endl;
+	std::cout << "Dog default constructor called" << std::endl;
 	std::cout << std::endl;
-	this->_type = "An Animal";
+	this->_type = "Dog";
 }
 
-Animal::Animal(const Animal &cpy)
+Dog::Dog(const Dog &cpy) : Animal()
 {
-	std::cout << "Animal copy constructor called" << std::endl;
+	std::cout << "Dog copy constructor called" << std::endl;
 	std::cout << std::endl;
 	*this = cpy;
 }
 
 //Destructor
-Animal::~Animal(void)
+Dog::~Dog(void)
 {
-	std::cout << "Animal default destructor called" << std::endl;
+	std::cout << "Dog default destructor called" << std::endl;
 	std::cout << std::endl;
 }
 
 //Operator overload
-Animal&	Animal::operator=(const Animal &ovr)
+Dog&	Dog::operator=(const Dog &ovr)
 {
 	this->_type = ovr._type;
-	std::cout << "Animal operator overload for =" << std::endl;
+	std::cout << "Dog operator overload for =" << std::endl;
 	std::cout << std::endl;
 	return (*this);
 }
 
 //methods
-std::string	Animal::getType(void)
-{
-	return (this->_type);
-}
 
-std::string	Animal::makeSound(void)
+std::string	Dog::makeSound(void)
 {
-	return ("undefined Sound");
+	return ("WUFF");
 }
