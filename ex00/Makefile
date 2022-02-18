@@ -6,13 +6,13 @@
 #    By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/12 14:06:05 by graja             #+#    #+#              #
-#    Updated: 2022/02/18 12:46:49 by graja            ###   ########.fr        #
+#    Updated: 2022/02/18 13:02:13 by graja            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	ex00
 
-SRCS	=	Animal.cpp Cat.cpp Dog.cpp main.cpp
+SRCS	=	Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp  main.cpp
 
 CC	=	c++
 

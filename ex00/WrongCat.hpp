@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 16:57:04 by graja             #+#    #+#             */
-/*   Updated: 2022/02/18 13:38:07 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/18 13:41:52 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-# define DOG_H
+#ifndef WRONGCAT_H
+# define WRONGCAT_H
 
-# include "Animal.hpp"
+# include "WrongAnimal.hpp"
 # include <iostream>
 
-class	Dog: public Animal
+class	WrongCat: public WrongAnimal
 {
 	public:
-		Dog(void);
-		Dog(const Dog &cpy);
-		virtual ~Dog(void);
+		WrongCat(void);
+		WrongCat(const WrongCat &cpy);
+		~WrongCat(void);
 
-		Dog&	operator=(const Dog &ovr);
+		WrongCat&	operator=(const WrongCat &ovr);
 
-		virtual std::string	makeSound(void) const;
+		std::string	makeSound(void) const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 16:57:04 by graja             #+#    #+#             */
-/*   Updated: 2022/02/18 12:02:45 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/18 13:36:44 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class	Cat: public Animal
 
 		Cat&	operator=(const Cat &ovr);
 
-		virtual std::string	makeSound(void);
+		virtual std::string	makeSound(void) const;
 };
 
 #endif

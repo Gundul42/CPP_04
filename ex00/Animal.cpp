@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 17:10:19 by graja             #+#    #+#             */
-/*   Updated: 2022/02/18 12:56:56 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/18 13:27:55 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,12 @@ Animal&	Animal::operator=(const Animal &ovr)
 }
 
 //methods
-std::string	Animal::getType(void)
+std::string	Animal::getType(void) const
 {
 	return (this->_type);
 }
 
-std::string	Animal::makeSound(void)
+std::string	Animal::makeSound(void) const
 {
 	return ("undefined Sound");
 }
