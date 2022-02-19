@@ -6,26 +6,31 @@
 #    By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/12 14:06:05 by graja             #+#    #+#              #
-#    Updated: 2022/02/19 14:32:00 by graja            ###   ########.fr        #
+#    Updated: 2022/02/19 18:12:48 by graja            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	ex03
 
-SRCS	=	AMateria.cpp Ice.cpp main.cpp
+SRCS	=	AMateria.cpp Cure.cpp Ice.cpp main.cpp
 
 CC	=	c++
 
-FLAGS	=	-Wextra -Werror -Wall
+FLAGS	=	-Wextra -Werror -Wall -I.
 
-$(NAME)	:	$(SRCS)
-	$(CC) $(FLAGS) $(SRCS) -o $(NAME)
+OBJ	=	${SRCS:.cpp=.o}
 
 all	:	$(NAME)
 
-clean	:
+$(NAME)	:	$(OBJ)
+	$(CC) $(FLAGS) -o $(NAME) $(OBJ)
 
-fclean	:	
+clean	:
+	rm -f $(OBJ)
+
+fclean	:	clean
 	rm -f $(NAME)
 
 re	:	fclean all
+
+.PHONY: all clean fclean re

@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 14:33:31 by graja             #+#    #+#             */
-/*   Updated: 2022/02/19 17:41:53 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/19 17:42:31 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_H
-# define ICE_H
+#ifndef CURE_H
+# define CURE_H
 
 # include "AMateria.hpp"
 
-class Ice : public AMateria
+class Cure : public AMateria
 {
 	public:
-		Ice(void);
-		Ice(Ice const &wen);
-		virtual ~Ice(void);
+		Cure(void);
+		Cure(Cure const &wen);
+		virtual ~Cure(void);
 
-		Ice&	operator=(const Ice &right);
+		Cure&	operator=(const Cure &right);
 
 
-		virtual Ice*	clone(void) const;
+		virtual Cure*	clone(void) const;
 };
 
 #endif
