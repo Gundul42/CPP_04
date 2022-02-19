@@ -1,70 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 17:10:19 by graja             #+#    #+#             */
-/*   Updated: 2022/02/19 12:35:22 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/19 09:54:51 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Animal.hpp"
 
 //Constructors
-Dog::Dog(void)
+Animal::Animal(void)
 {
-	std::cout << "Dog default constructor called" << std::endl;
+	std::cout << "Animal default constructor called" << std::endl;
 	std::cout << std::endl;
-	this->_type = "Dog";
-	this->_brain = new Brain();
+	this->_type = "An Animal";
 }
 
-Dog::Dog(const Dog &cpy) : Animal()
+Animal::Animal(const Animal &cpy)
 {
-	std::cout << "Dog copy constructor called" << std::endl;
+	std::cout << "Animal copy constructor called" << std::endl;
 	std::cout << std::endl;
 	*this = cpy;
 }
 
 //Destructor
-Dog::~Dog(void)
+Animal::~Animal(void)
 {
-	std::cout << "Dog default destructor called" << std::endl;
+	std::cout << "Animal default destructor called" << std::endl;
 	std::cout << std::endl;
-	delete this->_brain;
 }
 
 //Operator overload
-Dog&	Dog::operator=(const Dog &ovr)
+Animal&	Animal::operator=(const Animal &ovr)
 {
 	this->_type = ovr._type;
-	if (this->_brain)
-		delete this->_brain;
-	this->_brain = new Brain(*ovr._brain);
-	std::cout << "Dog operator overload for =" << std::endl;
+	std::cout << "Animal operator overload for =" << std::endl;
 	std::cout << std::endl;
 	return (*this);
 }
 
 //methods
-
-std::string	Dog::makeSound(void) const
+std::string	Animal::getType(void) const
 {
-	return ("WUFF");
-}
-
-std::string	Dog::getIdea(int n)
-{
-	if (n < 0 || n > 99)
-		return ("");
-	else
-		return (this->_brain->ideas[n]);
-}
-
-void		Dog::setIdea(int n, std::string mem)
-{
-	if (n >= 0 && n < 100)
-		this->_brain->ideas[n] = mem;
+	return (this->_type);
 }

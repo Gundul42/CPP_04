@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 18:17:23 by graja             #+#    #+#             */
-/*   Updated: 2022/02/19 12:51:50 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/19 12:58:35 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	main(void)
 	int			i = 0;
 	Cat			tiger;
 	Cat			pussy;
+	//Animal			elephant;
 
 	while (i < max / 2)
 	{
