@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 16:57:04 by graja             #+#    #+#             */
-/*   Updated: 2022/02/18 19:40:28 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/19 09:17:43 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class	Animal
 		Animal(const Animal &cpy);
 		virtual ~Animal(void);
 
-		virtual Animal&	operator=(const Animal &ovr);
+		Animal&	operator=(const Animal &ovr);
 
 		std::string	getType(void) const;
 		virtual std::string	makeSound(void) const;

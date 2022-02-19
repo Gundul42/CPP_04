@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 17:10:19 by graja             #+#    #+#             */
-/*   Updated: 2022/02/18 17:04:50 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/19 09:08:19 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ Brain&	Brain::operator=(const Brain &ovr)
 	while (i < 100)
 	{
 		this->ideas[i] = ovr.ideas[i];
+		std::cout << i << ") " << ovr.ideas[i] << std::endl;
 		i++;
 	}
 	return (*this);
