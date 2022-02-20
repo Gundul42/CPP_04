@@ -6,7 +6,7 @@
 #    By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/12 14:06:05 by graja             #+#    #+#              #
-#    Updated: 2022/02/20 13:10:40 by graja            ###   ########.fr        #
+#    Updated: 2022/02/20 17:55:19 by graja            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRCS	=	AMateria.cpp Cure.cpp Ice.cpp Character.cpp main.cpp
 
 CC	=	c++
 
-FLAGS	=	-Wextra -Werror -Wall -I.
+FLAGS	=	-Wextra -Werror -Wall -std=c++98 -pedantic
 
 OBJ	=	${SRCS:.cpp=.o}
 

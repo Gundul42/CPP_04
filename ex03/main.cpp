@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 15:22:26 by graja             #+#    #+#             */
-/*   Updated: 2022/02/20 13:52:37 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/20 18:19:33 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,20 @@
 
 int	main(void)
 {
-	Cure	lala;
-	Cure	lolo;
-	Ice	mimi;
-	Ice	momo;
-	Character	john;
+	AMateria*	mimi = new Ice;
+	AMateria*	momo = new Cure;
+	Character	john("Kuemmel");
+	Character	lilly("Lilly");
 
-	lolo = lala;
-	momo = mimi;
 	std::cout << std::endl << john.getName() << " is his name" << std::endl;
-	john.equip(&mimi);
-	john.equip(&lolo);
-	john.equip(&lala);
-	john.equip(&momo);
-	john.equip(&mimi);
+	john.equip(mimi);
+	john.equip(momo);
+	john.use(0, john);
+	john.use(1, lilly);
+	john.unequip(0);
+	john.use(0, john);
+	john.use(1, lilly);
+	delete mimi;
+	delete momo;
 	return (0);
 }

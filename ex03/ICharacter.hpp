@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 10:55:33 by graja             #+#    #+#             */
-/*   Updated: 2022/02/20 11:01:41 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/20 15:20:45 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 
 # include "AMateria.hpp"
 
-class ICharacter
+class	AMateria;
+
+class	ICharacter
 {
 	public:
 		virtual ~ICharacter(void) {};

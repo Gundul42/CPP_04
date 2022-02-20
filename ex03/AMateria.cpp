@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 14:06:07 by graja             #+#    #+#             */
-/*   Updated: 2022/02/20 15:06:56 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/20 17:58:20 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ AMateria& AMateria::operator=(const AMateria &right)
 	return (*this);
 }
 
+//Methods
 std::string const & AMateria::getType(void) const
 {
 	return (this->_type);

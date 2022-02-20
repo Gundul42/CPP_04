@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 12:36:45 by graja             #+#    #+#             */
-/*   Updated: 2022/02/20 15:06:11 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/20 18:20:30 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ Character&	Character::operator=(Character const &right)
 	return (*this);
 }
 
-//Methods
+//Methods and implementation of ICharacter interface
 std::string const &Character::getName(void) const
 {
 	return (this->_name);
@@ -69,15 +69,29 @@ void	Character::equip(AMateria* m)
 	}
 	this->_idx++;
 	this->_inventory[this->_idx] = m;
-	std::cout << m->getType() << " was equipped" << std::endl;
+	std::cout << m->getType() << " was equipped in slot #" << this->_idx << std::endl;
 }
 
 void	Character::unequip(int idx)
 {
-	std::cout << idx << " was unequipped" << std::endl;
+	int	i;
+
+	i = idx;
+	if (i < 0 || i > this->_idx)
+		return ;
+	while (i < this->_idx)
+	{
+		this->_inventory[i] = this->_inventory[i + 1];
+		i++;
+	}
+	this->_inventory[i] = NULL;
+	this->_idx--;
+	std::cout << "Slot " << idx << " was unequipped" << std::endl;
 }
 
 void	Character::use(int idx, ICharacter& target)
 {
-	std::cout << idx << " used by " << target.getName() << std::endl;
+	if (idx < 0 || idx > this->_idx)
+		return ;
+	this->_inventory[idx]->use(target);
 }

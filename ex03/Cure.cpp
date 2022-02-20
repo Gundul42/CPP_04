@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 14:33:04 by graja             #+#    #+#             */
-/*   Updated: 2022/02/19 17:28:43 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/20 17:02:21 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,13 @@ Cure&	Cure::operator=(const Cure &right)
 
 Cure*	Cure::clone(void) const
 {
-	Cure*	cpy = new Cure();
+	Cure*	bck = new Cure;
 
 	std::cout << "Cure cloning" << std::endl;
-	*cpy = *this;
-	return (cpy);
+	return (bck);
+}
+
+void	Cure::use(ICharacter& target)
+{
+	std::cout << "*heals " << target.getName() <<"'s wounds" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 14:33:04 by graja             #+#    #+#             */
-/*   Updated: 2022/02/19 15:59:13 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/20 16:57:51 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,9 @@ Ice*	Ice::clone(void) const
 	std::cout << "Ice cloning" << std::endl;
 	*cpy = *this;
 	return (cpy);
+}
+
+void	Ice::use(ICharacter& target)
+{
+	std::cout << "*shoots an ice bolt at " << target.getName() << std::endl;
 }

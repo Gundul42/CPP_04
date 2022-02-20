@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 14:33:31 by graja             #+#    #+#             */
-/*   Updated: 2022/02/19 17:41:53 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/20 15:39:23 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,13 @@ class Ice : public AMateria
 	public:
 		Ice(void);
 		Ice(Ice const &wen);
-		virtual ~Ice(void);
+		~Ice(void);
 
 		Ice&	operator=(const Ice &right);
 
 
-		virtual Ice*	clone(void) const;
+		Ice*	clone(void) const;
+		void	use(ICharacter& target);
 };
 
 #endif
