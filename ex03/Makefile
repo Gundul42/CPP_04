@@ -6,13 +6,13 @@
 #    By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/12 14:06:05 by graja             #+#    #+#              #
-#    Updated: 2022/02/19 18:12:48 by graja            ###   ########.fr        #
+#    Updated: 2022/02/20 13:10:40 by graja            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	ex03
 
-SRCS	=	AMateria.cpp Cure.cpp Ice.cpp main.cpp
+SRCS	=	AMateria.cpp Cure.cpp Ice.cpp Character.cpp main.cpp
 
 CC	=	c++
 

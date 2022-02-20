@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/19 15:22:26 by graja             #+#    #+#             */
-/*   Updated: 2022/02/20 13:52:37 by graja            ###   ########.fr       */
+/*   Created: 2022/02/20 10:55:33 by graja             #+#    #+#             */
+/*   Updated: 2022/02/20 11:01:41 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cure.hpp"
-#include "Ice.hpp"
-#include "Character.hpp"
+#ifndef ICHARACTER_H
+# define ICHARACTER_H
 
-int	main(void)
+# include "AMateria.hpp"
+
+class ICharacter
 {
-	Cure	lala;
-	Cure	lolo;
-	Ice	mimi;
-	Ice	momo;
-	Character	john;
+	public:
+		virtual ~ICharacter(void) {};
+		virtual std::string const&	 getName(void) const = 0;
+		virtual void				equip(AMateria* m) = 0;
+		virtual void				unequip(int idx) = 0;
+		virtual void				use(int idx, ICharacter& target) = 0;
+};
 
-	lolo = lala;
-	momo = mimi;
-	std::cout << std::endl << john.getName() << " is his name" << std::endl;
-	john.equip(&mimi);
-	john.equip(&lolo);
-	john.equip(&lala);
-	john.equip(&momo);
-	john.equip(&mimi);
-	return (0);
-}
+#endif
