@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 12:36:45 by graja             #+#    #+#             */
-/*   Updated: 2022/02/21 11:55:36 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/21 17:09:22 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,14 @@ Character::Character(Character const &cpy)
 //Destructor
 Character::~Character(void)
 {
+	int	i;
+
+	i = 0;
+	while (i <= this->_idx)
+	{
+		delete this->_inventory[i];
+		i++;
+	}
 }
 
 //Operator overload

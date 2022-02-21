@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 14:33:04 by graja             #+#    #+#             */
-/*   Updated: 2022/02/20 17:02:21 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/21 16:23:31 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ Cure*	Cure::clone(void) const
 {
 	Cure*	bck = new Cure;
 
+	*bck = *this;
 	std::cout << "Cure cloning" << std::endl;
 	return (bck);
 }

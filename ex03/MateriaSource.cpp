@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 12:32:11 by graja             #+#    #+#             */
-/*   Updated: 2022/02/21 13:53:01 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/21 16:00:56 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,17 @@ MateriaSource::MateriaSource(MateriaSource const &right)
 
 //Destructor
 MateriaSource::~MateriaSource(void)
-{}
+{
+	int	i;
+
+	std::cout << "MateriaSource Destructor" << std::endl;
+	i = 0;
+	while (i <= this->_idx)
+	{
+		delete this->_sources[i];
+		i++;
+	}
+}
 
 //Operator overload
 MateriaSource& MateriaSource::operator=(MateriaSource const & right)
@@ -71,7 +81,7 @@ AMateria* MateriaSource::createMateria(std::string const & type)
 	{
 		i++;
 		if (this->_sources[i]->getType() == type)
-			return (this->_sources[i]);
+			return (this->_sources[i]->clone());
 	}
 	return (NULL);
 }
