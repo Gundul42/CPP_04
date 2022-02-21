@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 12:21:02 by graja             #+#    #+#             */
-/*   Updated: 2022/02/21 13:05:34 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/21 13:46:46 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "IMateriaSource.hpp"
 # include "AMateria.hpp"
 
-class MateriaSource : IMateriaSource
+class MateriaSource : public IMateriaSource
 {
 	private:
 		int			_idx;
@@ -29,8 +29,8 @@ class MateriaSource : IMateriaSource
 
 		MateriaSource&	operator=(MateriaSource const & right);
 
-		void learnMateria(AMateria* cpy) = 0;
-		AMateria* createMateria(std::string const & type) = 0;
+		void learnMateria(AMateria* cpy);
+		AMateria* createMateria(std::string const & type);
 };
 
 #endif
