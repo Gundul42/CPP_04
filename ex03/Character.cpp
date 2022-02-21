@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 12:36:45 by graja             #+#    #+#             */
-/*   Updated: 2022/02/20 18:20:30 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/21 11:55:36 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,18 @@ Character::~Character(void)
 //Operator overload
 Character&	Character::operator=(Character const &right)
 {
-	*this = right;
+	int	i;
+
+	i = 0;
+	while (i < 4)
+	{
+		if (right._inventory[i])
+			this->_inventory[i] = right._inventory[i];
+		else
+			this->_inventory[i] = NULL;
+		i++;
+	}
+	this->_idx = right._idx;
 	return (*this);
 }
 
@@ -92,6 +103,10 @@ void	Character::unequip(int idx)
 void	Character::use(int idx, ICharacter& target)
 {
 	if (idx < 0 || idx > this->_idx)
+	{
+		std::cout << "Nothing can be used here, " << this->_name << std::endl;
 		return ;
+	}
+	std::cout << this->getName() << " ";
 	this->_inventory[idx]->use(target);
 }
