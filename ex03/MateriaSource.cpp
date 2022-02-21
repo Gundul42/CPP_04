@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 12:32:11 by graja             #+#    #+#             */
-/*   Updated: 2022/02/21 13:07:42 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/21 13:53:01 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ AMateria* MateriaSource::createMateria(std::string const & type)
 	{
 		i++;
 		if (this->_sources[i]->getType() == type)
-			std::cout << "Match found" << std::endl;
+			return (this->_sources[i]);
 	}
 	return (NULL);
 }
