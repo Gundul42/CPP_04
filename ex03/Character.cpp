@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 12:36:45 by graja             #+#    #+#             */
-/*   Updated: 2022/02/21 17:09:22 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/21 18:37:18 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,7 @@ void	Character::unequip(int idx)
 	i = idx;
 	if (i < 0 || i > this->_idx)
 		return ;
+	delete this->_inventory[i];
 	while (i < this->_idx)
 	{
 		this->_inventory[i] = this->_inventory[i + 1];

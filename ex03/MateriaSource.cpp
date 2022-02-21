@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 12:32:11 by graja             #+#    #+#             */
-/*   Updated: 2022/02/21 16:00:56 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/21 17:20:25 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,12 @@ MateriaSource& MateriaSource::operator=(MateriaSource const & right)
 void MateriaSource::learnMateria(AMateria* cpy)
 {
 	if (this->_idx > 2)
+	{
+		std::cout << "***ERROR: ";
+		std::cout << "Already know 4 Materia, memory overflow" << std::endl;
+		delete cpy;
 		return;
+	}
 	this->_idx++;
 	this->_sources[this->_idx] = cpy;
 }
