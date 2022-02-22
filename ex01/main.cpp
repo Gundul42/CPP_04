@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 18:17:23 by graja             #+#    #+#             */
-/*   Updated: 2022/02/19 12:51:50 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/22 15:23:09 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ int	main(void)
 	std::cout << std::endl;
 	tiger.setIdea(25, "I am so fucking hungry !");
 	std::cout << "Tiger says : " << tiger.getIdea(25) << std::endl;
+	std::cout << "Pussy says : " << pussy.getIdea(25) << std::endl;
 	pussy = tiger;
 	std::cout << "And now pussy says : " << pussy.getIdea(25) << std::endl;
 	return (0);
