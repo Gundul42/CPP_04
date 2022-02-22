@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 10:55:33 by graja             #+#    #+#             */
-/*   Updated: 2022/02/20 15:44:30 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/22 12:35:19 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define CHARACTER_H
 
 # include "ICharacter.hpp"
+
+class	ICharacter;
 
 class Character : public ICharacter
 {

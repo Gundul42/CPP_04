@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 12:32:11 by graja             #+#    #+#             */
-/*   Updated: 2022/02/22 10:14:52 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/22 14:23:47 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,6 @@ AMateria* MateriaSource::createMateria(std::string const & type)
 		if (this->_sources[i]->getType() == type)
 			return (this->_sources[i]->clone());
 	}
+	std::cout << "*ERROR: unknown Materia" << std::endl;
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 12:36:45 by graja             #+#    #+#             */
-/*   Updated: 2022/02/22 10:18:19 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/22 14:14:03 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,10 @@ Character&	Character::operator=(Character const &right)
 	i = 0;
 	while (i < 4)
 	{
+		if (this->_inventory[i])
+			delete this->_inventory[i];
 		if (right._inventory[i])
-			this->_inventory[i] = right._inventory[i];
+			this->_inventory[i] = right._inventory[i]->clone();
 		else
 			this->_inventory[i] = NULL;
 		i++;
