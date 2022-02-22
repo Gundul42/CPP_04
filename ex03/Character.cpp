@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 12:36:45 by graja             #+#    #+#             */
-/*   Updated: 2022/02/21 18:37:18 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/22 10:18:19 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,9 @@ void	Character::equip(AMateria* m)
 	}
 	this->_idx++;
 	this->_inventory[this->_idx] = m;
-	std::cout << m->getType() << " was equipped in slot #" << this->_idx << std::endl;
+	std::cout << this->getName();
+	std::cout << " has equipped " << m->getType() << " in slot #";
+	std::cout << this->_idx << std::endl;
 }
 
 void	Character::unequip(int idx)
@@ -106,7 +108,7 @@ void	Character::unequip(int idx)
 	}
 	this->_inventory[i] = NULL;
 	this->_idx--;
-	std::cout << "Slot " << idx << " was unequipped" << std::endl;
+	std::cout << this->getName() << "'s Slot " << idx << " was unequipped" << std::endl;
 }
 
 void	Character::use(int idx, ICharacter& target)

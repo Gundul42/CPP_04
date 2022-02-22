@@ -6,43 +6,38 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 14:33:04 by graja             #+#    #+#             */
-/*   Updated: 2022/02/21 16:23:31 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/22 10:12:18 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
 //Constructors
-
 Cure::Cure(void) : AMateria("cure")
-{
-	std::cout << "Cure default constructor called" << std::endl;
-}
+{}
 
 Cure::Cure(Cure const &wen) : AMateria(wen)
 {
-	std::cout << "Cure copy constructor called" << std::endl;
 	*this = wen;
 }
 
+//Destructor
 Cure::~Cure(void)
-{
-	std::cout << "Cure destructor called" << std::endl;
-}
+{}
 
+//Operator overload
 Cure&	Cure::operator=(const Cure &right)
 {
-	std::cout << "Cure operator overload =" << std::endl;
 	this->_type = right._type;
 	return (*this);
 }
 
+//Methods
 Cure*	Cure::clone(void) const
 {
 	Cure*	bck = new Cure;
 
 	*bck = *this;
-	std::cout << "Cure cloning" << std::endl;
 	return (bck);
 }
 

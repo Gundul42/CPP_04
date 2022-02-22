@@ -6,7 +6,7 @@
 /*   By: graja <graja@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 12:32:11 by graja             #+#    #+#             */
-/*   Updated: 2022/02/21 17:20:25 by graja            ###   ########.fr       */
+/*   Updated: 2022/02/22 10:14:52 by graja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ MateriaSource::~MateriaSource(void)
 {
 	int	i;
 
-	std::cout << "MateriaSource Destructor" << std::endl;
 	i = 0;
 	while (i <= this->_idx)
 	{
